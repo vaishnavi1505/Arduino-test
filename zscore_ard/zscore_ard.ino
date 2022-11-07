@@ -40,18 +40,12 @@ float median(float samples[],int m) //calculate the median
   //First bubble sort the values: https://en.wikipedia.org/wiki/Bubble_sort
   float sorted[m];   //Define and initialize sorted array.
   float temp=0.0;      //Temporary float for swapping elements
-  /*Serial.println("Before:");
-  for(int j=0;j<m;j++){
-    Serial.println(samples[j]);
-  }*/
+
   for(int i=0;i<m;i++){
     sorted[i]=samples[i];
   }
   bubbleSort(sorted,m);  // Sort the values
-  /*Serial.println("After:");
-  for(int i=0;i<m;i++){
-    Serial.println(sorted[i]);
-  }*/
+
   if (bitRead(m,0)==1) {  //If the last bit of a number is 1, it's odd. This is equivalent to "TRUE". Also use if m%2!=0.
     return sorted[m/2]; //If the number of data points is odd, return middle number.
   } else {    
@@ -151,10 +145,6 @@ void loop() {
                           ,52.23399532,44.74363289,46.85639553,53.79256611,26.629648,50.90533031
                           ,51.16787813,21.59172339,47.09981105,71.5843143,35.27148818,54.28094494
                           ,50.8329343,33.00984194,39.11539505,71.24052149};
-
-
-                
-
 
 
 
